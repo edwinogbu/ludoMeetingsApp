@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }: any) => {
     // };
 
     const verifyEmail = async (email: string, otp: string) => {
-        return axios.post(`${API_URL}/api/auth/verify-email`, { email, otp }).then(res => res.data);
+        return axios.post(`${API_URL}/verify-email`, { email, otp }).then(res => res.data);
     };
     
     const sendOTP = async (email: string) => {
